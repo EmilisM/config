@@ -1,0 +1,32 @@
+[general]
+# import = ["~/.config/alacritty/themes/themes/gnome_terminal.toml"]
+
+[font]
+normal.family = "JetBrainsMono Nerd Font"
+bold.family = "JetBrainsMono Nerd Font"
+italic.family = "JetBrainsMono Nerd Font"
+size = 11
+
+[window]
+dimensions.columns = 156
+dimensions.lines = 32
+padding.x = 12
+padding.y = 12
+opacity = 0.98
+decorations = "full"
+dynamic_title = true
+
+[terminal.shell]
+program = "/bin/zsh"
+args = ["--login"]
+
+[env]
+TERM = "xterm-256color"
+
+[keyboard]
+bindings = [
+    { key = "Right", mods = "Control", chars = "\u001BF" },      # Move cursor one word right
+    { key = "Left", mods = "Control", chars = "\u001BB" },       # Move cursor one word left
+    { key = "Delete", mods = "Control", chars = "\u001b[3;3~" }, # Delete word forward
+    { key = "Back", mods = "Control", chars = "\u001b\u007f" },  # Delete word backward
+]
