@@ -7,14 +7,16 @@ export EDITOR=/bin/code
 alias ls='ls --color=auto'
 alias ll='ls -lah --color=auto'
 alias grep='grep --color=auto'
-alias ezc="$EDITOR $HOME/.zshrc" # edit .zshrc
-alias sc="source $HOME/.zshrc"  # reload zsh configuration
-alias eac="$EDITOR $HOME/.config/alacritty/alacritty.toml"
-alias esc="$EDITOR $HOME/.config/starship.toml"
-alias ec="$EDITOR $HOME/.config"
+
+# Editing alises
+alias edit-zsh="$EDITOR $HOME/.zshrc" # edit .zshrc
+alias reload-zsh="source $HOME/.zshrc"  # reload zsh configuration
+alias edit-alacritty="$EDITOR $HOME/.config/alacritty/alacritty.toml"
+alias edit-starship="$EDITOR $HOME/.config/starship.toml"
+alias edit-configs="$EDITOR $HOME/.config"
 
 alias dotfiles='git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
-
+  
 setopt histignorealldups sharehistory
 
 bindkey "^[[3;3~" delete-word
