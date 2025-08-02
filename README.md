@@ -9,7 +9,7 @@
 
 ## Clone
 
-- `git clone --bare <git-repo-url> $HOME/.dotfiles`
+- `git clone --bare https://github.com/EmilisM/config.git $HOME/.dotfiles`
 - `alias dotfiles='git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'`
     - Make it permanent in .zshrc or .bashrc
 - `dotfiles checkout`
