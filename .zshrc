@@ -8,6 +8,8 @@ alias ls='ls --color=auto'
 alias ll='ls -lah --color=auto'
 alias grep='grep --color=auto'
 
+alias wake-amethyst='sudo etherwake E8:6A:64:BF:BF:9E'
+
 # Editing alises
 alias edit-zsh="$EDITOR $HOME/.zshrc" # edit .zshrc
 alias reload-zsh="source $HOME/.zshrc"  # reload zsh configuration
@@ -66,3 +68,5 @@ if [ -d "$FNM_PATH" ]; then
   export PATH="/home/emilis/.local/share/fnm:$PATH"
   eval "`fnm env`"
 fi
+
+export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
