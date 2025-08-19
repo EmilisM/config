@@ -1,7 +1,7 @@
 # Set path if required
 #export PATH=$GOPATH/bin:/usr/local/go/bin:$PATH
 
-export EDITOR=/bin/nvim
+export EDITOR="/opt/nvim-linux-x86_64/bin/nvim"
 
 # Aliases
 alias ls='ls --color=auto'
