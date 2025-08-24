@@ -1,0 +1,48 @@
+// -*- mode: jsonc -*-
+{
+    // "layer": "top", // Waybar at top layer
+    // "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": 32, // Waybar height (to be removed for auto height)
+    // "width": 1280, // Waybar width
+    "spacing": 0, // Gaps between modules (4px)
+    // Choose the order of the modules
+    "modules-left": [],
+    "modules-center": [],
+    "modules-right": [
+	"hyprland/language",
+        "pulseaudio",
+        "clock",
+        "tray",
+    ],
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10,
+        // "icons": {
+        //   "blueman": "bluetooth",
+        //   "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
+        // }
+    },
+    "clock": {
+        "format": "{:%Y-%m-%d %H:%M:%S}",
+	"interval": 1,
+	"tooltip": false
+    },
+    "pulseaudio": {
+        "format": "VOL: {volume}%",
+        "format-bluetooth": "VOL: {volume}% ",
+        "format-bluetooth-muted": "MUT ",
+        "format-muted": "MUT",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+    },
+    "hyprland/language": {
+	"format": "LNG: {short}",
+    },
+}

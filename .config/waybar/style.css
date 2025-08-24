@@ -1,0 +1,30 @@
+* {
+    font-family: "JetBrains Mono", monospace; 
+    font-size: 14px;
+}
+
+window#waybar {
+    background-color: #000000;
+    color: #000000;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+#clock,
+#pulseaudio,
+#language {
+    background-color: #95B4D0;
+    border-radius: 8px;
+    border: 1px solid #95B4D0;
+
+    padding: 0 4px;
+    margin: 4px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+}

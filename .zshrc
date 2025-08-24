@@ -1,7 +1,7 @@
 # Set path if required
 #export PATH=$GOPATH/bin:/usr/local/go/bin:$PATH
 
-export EDITOR="/opt/nvim-linux-x86_64/bin/nvim"
+export EDITOR="/usr/bin/nvim"
 
 # Aliases
 alias ls='ls --color=auto'
@@ -16,6 +16,7 @@ alias reload-zsh="source $HOME/.zshrc"  # reload zsh configuration
 alias edit-alacritty="$EDITOR $HOME/.config/alacritty/alacritty.toml"
 alias edit-starship="$EDITOR $HOME/.config/starship.toml"
 alias edit-configs="$EDITOR $HOME/.config"
+alias edit-hl="$EDITOR $HOME/.config/hypr/hyprland.conf"
 
 alias dotfiles='git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
   
