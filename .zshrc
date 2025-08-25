@@ -22,8 +22,13 @@ alias dotfiles='git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
   
 setopt histignorealldups sharehistory
 
-bindkey "^[[3;3~" delete-word
-bindkey "^[^?" backward-delete-word
+bindkey "^[[3;5~" delete-word
+bindkey "^H" backward-delete-word
+bindkey  "^[[H"   beginning-of-line
+bindkey  "^[[F"   end-of-line
+bindkey  "^[[3~"  delete-char
+bindkey "^[[1;5D" backward-word
+bindkey "^[[1;5C" forward-word
 
 HISTSIZE=5000
 SAVEHIST=5000
@@ -62,20 +67,3 @@ zinit load "zsh-users/zsh-history-substring-search"
 zinit load "zsh-users/zsh-completions"
 
 eval "$(starship init zsh)"
-
-# fnm
-FNM_PATH="/home/emilis/.local/share/fnm"
-if [ -d "$FNM_PATH" ]; then
-  export PATH="/home/emilis/.local/share/fnm:$PATH"
-  eval "`fnm env`"
-fi
-
-export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
-
-# pnpm
-export PNPM_HOME="/home/emilis/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end

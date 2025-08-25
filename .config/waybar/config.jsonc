@@ -9,7 +9,7 @@
     "modules-left": [],
     "modules-center": [],
     "modules-right": [
-	"hyprland/language",
+        "hyprland/language",
         "pulseaudio",
         "clock",
         "tray",
@@ -24,14 +24,14 @@
     },
     "clock": {
         "format": "{:%Y-%m-%d %H:%M:%S}",
-	"interval": 1,
-	"tooltip": false
+        "interval": 1,
+        "tooltip": false
     },
     "pulseaudio": {
         "format": "VOL: {volume}%",
         "format-bluetooth": "VOL: {volume}% ",
-        "format-bluetooth-muted": "MUT ",
-        "format-muted": "MUT",
+        "format-bluetooth-muted": "VOL: MUT ",
+        "format-muted": "VOL: MUT",
         "format-icons": {
             "headphone": "",
             "hands-free": "",
@@ -41,8 +41,9 @@
             "car": "",
             "default": ["", "", ""]
         },
+        "on-click": "pactl set-sink-mute 0 toggle"
     },
     "hyprland/language": {
-	"format": "LNG: {short}",
+        "format": "LNG: {short}",
     },
 }
